@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="medicineStoreApp">
+<head>
+  <title>Online Medicines Store</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+</head>
+<body>
+  <div ng-controller="PrescriptionController">
+    <h1>Online Medicines Store</h1>
+    <form ng-submit="submitPrescription()">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" ng-model="prescription.fullName" required>
+      
+      <label for="mobileNo">Mobile No:</label>
+      <input type="text" id="mobileNo" ng-model="prescription.mobileNo" required>
+      
+      <label for="age">Age:</label>
+      <input type="text" id="age" ng-model="prescription.age" required>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" ng-model="prescription.address" required></textarea>
+      
+      <label for="prescriptionDetails">Prescription Details:</label>
+      <textarea id="prescriptionDetails" ng-model="prescription.prescriptionDetails" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div ng-show="showSuccessMessage" class="message">
+        <p>Data submitted successfully</p>
+    </div>    
+      
+    </div>
+</body>
+</html>
